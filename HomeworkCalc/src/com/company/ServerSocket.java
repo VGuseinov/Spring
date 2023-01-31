@@ -13,19 +13,19 @@ public class ServerSocket {
         try {
             try {
                 server = new java.net.ServerSocket(4006);
-                System.out.println("Сервер запущен!");
+                System.out.println("The server is running!");
                 clientSocket = server.accept();
                 try {
                     boolean isConnected = true;
                     in = new BufferedReader(new InputStreamReader((clientSocket.getInputStream())));
                     out = new BufferedWriter(new OutputStreamWriter(clientSocket.getOutputStream()));
-                    out.write("Привет, это Сервер! давай поругаемся если надоест, то нажми -" + "!\n");
+                    out.write("Welcome to the calculator! To exit, press \"-\" " + "\n");
                     out.flush();
                     while (isConnected) {
                         String clientWord = in.readLine();
 
                         if (clientWord.equals("-")) {
-                            out.write("так и знал что ты сдашься \n");
+                            out.write("See you soon. \n");
                             out.flush();
                             isConnected = false;
                         } else {
@@ -39,7 +39,7 @@ public class ServerSocket {
                     out.close();
                 }
             } finally {
-                System.out.println("Сервер закрыт!");
+                System.out.println("The server is closed!");
                 server.close();
             }
         } catch (IOException e) {

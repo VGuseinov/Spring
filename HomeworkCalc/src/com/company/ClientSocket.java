@@ -16,7 +16,7 @@ public class ClientSocket {
                 reader = new BufferedReader(new InputStreamReader(System.in));
                 in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
                 out = new BufferedWriter(new OutputStreamWriter(clientSocket.getOutputStream()));
-                System.out.println("приветсвтвую в эмуляции стрелочника");
+                System.out.println("Calculator");
                 String serverWord = in.readLine();
                 System.out.println(serverWord);
                 boolean isConnected = true;
@@ -34,7 +34,7 @@ public class ClientSocket {
                     }
                 }
             } finally {
-                System.out.println("Клиент был закрыт...");
+                System.out.println("End of work");
                 clientSocket.close();
                 in.close();
                 out.close();
