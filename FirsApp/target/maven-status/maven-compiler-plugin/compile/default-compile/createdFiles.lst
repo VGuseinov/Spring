@@ -1,3 +1,6 @@
-com\vguseinov\springlearn\MyServlet.class
-com\vguseinov\springlearn\ThirdServlet.class
-com\vguseinov\springlearn\SecondServlet.class
+com\vguseinov\springlearn\Error.class
+com\vguseinov\springlearn\Total.class
+com\vguseinov\springlearn\TotalCounter.class
+com\vguseinov\springlearn\MyFilter.class
+com\vguseinov\springlearn\Shop.class
+com\vguseinov\springlearn\Welcome.class
